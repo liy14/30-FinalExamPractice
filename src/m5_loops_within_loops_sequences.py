@@ -230,11 +230,15 @@ def big_letters(sequence_of_sequences):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  12 minutes.
     # ------------------------------------------------------------------
+    new = ""
     for k in range(len(sequence_of_sequences)):
         la = sequence_of_sequences[k]
-        for g in range(len(la)):
-            if type(la[g]) is str:
-                "".upper(la[])
+        if type(la) is str:
+            for g in range(len(la)):
+                if la[g].isupper():
+                    new = new + la[g]
+    return new
+
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
