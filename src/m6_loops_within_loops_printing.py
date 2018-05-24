@@ -75,7 +75,7 @@ def shape(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     ####################################################################
@@ -88,9 +88,19 @@ def shape(r):
     #    TIME ESTIMATE:  15 minutes.
     # ------------------------------------------------------------------
     for k in range(r):
-        for g in range(2*r+2-k):
-            if g <= r:
-                print("+", end="")
+        for g in range(k):
+            print(" ", end="")
+        for j in range(r-k, 0 ,-1):
+            print("+", end="")
+        print("!", end="")
+        for p in range(r-k, 0, -1):
+            print(p, end="")
+        for q in range(k):
+            print("-", end="")
+        print("")
+
+        print('')
+
 
 
 
